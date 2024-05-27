@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Analysis Project</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #fff;
+        }
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sentiment Analysis of Mobile Reviews</h1>
+        <p>Enter the name of the mobile phone to analyze its reviews:</p>
+        <input type="text" id="mobile-name" class="form-control" placeholder="Enter mobile name">
+        <button class="btn btn-primary btn-block" onclick="analyzeSentiment()">Analyze Sentiment</button>
+    </div>
+    <script>
+        function analyzeSentiment() {
+            const mobileName = document.getElementById('mobile-name').value;
+            if (mobileName) {
+                window.location.href = `/result.html?mobile=${mobileName}`;
+            }
+        }
+    </script>
+</body>
+</html>
